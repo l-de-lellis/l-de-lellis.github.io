@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+            <title>Ma Bibliothèque</title>
+
+            <style>
+                input[type=text], select {
+                    width: 100%;
+                    padding: 9px 10px;
+                    margin: 8px 0;
+                    display: inline-block;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                }
+
+                textarea{
+                    width: 100%;
+                    padding: 9px 10px;
+                    margin: 8px 0;
+                    display: inline-block;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                }
+
+                input[type=checkbox]{
+                    padding: 12 px 10px;
+                    margin: 8px 0;
+                }
+
+                input[type=submit] {
+                    width: 100%;
+                    background-color: #4CAF50;
+                    color: white;
+                    padding: 14px 20px;
+                    margin: 8px 0;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                }
+
+
+                input[type=submit]:hover {
+                    background-color: #45a049;
+                }
+
+                body{
+                    background-color: #f2f2f2;
+                    font-family: sans-serif;
+                }
+
+                div[id="data_entry"] {
+                    width: 50%;
+                    border-radius: 5px;
+                    background-color: #f2f2f2;
+                    padding: 20px;
+                }
+
+                div[id="title"] {
+                    width: 50%;
+                    border-radius: 5px;
+                    background-color: #f2f2f2;
+                    padding: 20px;
+                }
+
+                ul {
+                    list-style-type:none;
+                    padding: 0px;
+                    margin: 10px;
+                }
+
+            </style>
+        </head>
+
+
+<body>
+    <div id="title">
+        <h2>Base des donées pour la bibliothèque</h2>
+    </div>
+
+    <div id="data_entry">
+        <form class="biblio" action="index.html" method="post">
+            <label for="auteur">Auteur(s) :</label><br>
+            <input id="auteur" type="TEXT" placeholder="Nom de l'auteur..."><br>
+            <br>
+
+            <label for="titre">Titre :</label><br>
+            <input id="titre" type="TEXT" placeholder="Titre de l'ouvrage..."><br>
+            <br>
+
+            <label for="éditeur">Éditeur :</label><br>
+            <select id="éditeur"  id="éditeur">
+                <option value="gallimard">Gallimard</option>
+                <option value="hachette">Hachette</option>
+                <option value="puf">Presses universitaires de France</option>
+                <option value="efr">École française de Rome</option>
+
+            </select><br>
+            <br>
+
+            <label for="lieu">Lieu de publication :</label><br>
+            <select id="lieu" >
+                <option value="">Paris</option>
+                <option value="">Roma</option>
+            </select><br>
+            <br>
+
+            <table>
+                <tr>
+                    <td><label for="date">Date :</label></td>
+                    <td><label for="pages">N° des pages :</label></td>
+                    <td><label for="format">Format :</label></td>
+                </tr>
+
+                <tr>
+                    <td ><input id="date" type="TEXT" placeholder="Date de publication..."></td>
+                    <td><input id="pages" type="TEXT" placeholder="N° des pages..."></td>
+                    <td rowspan="6"><ul>
+                            <li><input id="format" type = "checkbox" name = "livredepoche" value = "on"> Livre de poche</li>
+                            <li><input id="format" type = "checkbox" name = "livrerelié" value = "on"> Livre relié</li>
+                            <li><input id="format" type = "checkbox" name = "e-book" value = "on"> E-book</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+
+
+            <label for="description">Description :</label><br>
+            <textarea id="description" rows="5" cols="80" name="Description" placeholder="Description du livre..."></textarea><br>
+            <br>
+
+            <input type="submit" name="enregistrer" value="Enregistrer">
+        </form>
+    </div>
+</body>
+</html>
